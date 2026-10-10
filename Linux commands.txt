@@ -1,0 +1,87 @@
+
+#!/usr/bin/env bash
+set -e
+
+# ==========================================
+# Q-CARE V8 - LINUX SETUP AND LAUNCHER
+# ==========================================
+
+PROJECT="$HOME/Desktop/Q-Care"
+BACKEND="$PROJECT/backend"
+FRONTEND="$PROJECT/frontend/index.html"
+
+echo "=========================================="
+echo "       Q-CARE V8 LINUX SETUP"
+echo "=========================================="
+
+# 1. Check project folder
+if [ ! -f "$BACKEND/app.py" ]; then
+    echo "ERROR: Cannot find $BACKEND/app.py"
+    echo "Edit PROJECT in this script to match your folder."
+    exit 1
+fi
+
+cd "$BACKEND"
+
+# 2. Check Python
+if ! command -v python3 >/dev/null 2>&1; then
+    echo "Python 3 is missing. Install Python 3 first."
+    exit 1
+fi
+
+# 3. Install system prerequisites (Debian/Ubuntu/Zorin)
+if command -v apt-get >/dev/null 2>&1; then
+    if ! command -v python3-venv >/dev/null 2>&1; then
+        echo "Installing Python venv support..."
+        sudo apt-get update
+        sudo apt-get install -y python3-venv python3-pip
+    fi
+fi
+
+# 4. Create a fresh Linux virtual environment
+if [ ! -d "qcare-env" ]; then
+    python3 -m venv qcare-env
+fi
+
+source qcare-env/bin/activate
+
+# 5. Upgrade pip
+python -m pip install --upgrade pip
+
+# 6. Install project dependencies
+if [ -f "requirements.txt" ]; then
+    echo "Installing requirements.txt..."
+    python -m pip install -r requirements.txt
+elif [ -f "$PROJECT/requirements.txt" ]; then
+    echo "Installing project requirements..."
+    python -m pip install -r "$PROJECT/requirements.txt"
+else
+    echo "WARNING: No requirements.txt found."
+    echo "Install the dependencies listed in your project documentation."
+fi
+
+# 7. Check API key configuration
+if [ -f "$BACKEND/.env" ]; then
+    echo "Found backend .env file."
+    echo "Ensure your Gemini API key is configured securely."
+else
+    echo "NOTE: No backend .env file found."
+    echo "If your app needs GEMINI_API_KEY, configure it in this terminal."
+fi
+
+# 8. Launch frontend browser
+if [ -f "$FRONTEND" ]; then
+    if command -v xdg-open >/dev/null 2>&1; then
+        xdg-open "$FRONTEND" >/dev/null 2>&1 &
+    fi
+else
+    echo "WARNING: Frontend index.html not found at $FRONTEND"
+fi
+
+# 9. Start Flask
+echo
+echo "Starting Q-Care backend..."
+echo "Keep this terminal open while using Q-Care."
+echo "=========================================="
+
+python app.py

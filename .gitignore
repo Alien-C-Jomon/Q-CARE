@@ -1,0 +1,71 @@
+
+# Python virtual environments
+qcare-env/
+.venv/
+venv/
+env/
+
+# Python cache and test artifacts
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+secrets/
+credentials.json
+
+# Logs and local databases
+*.log
+*.sqlite
+*.sqlite3
+*.db
+
+# Editors and operating system
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Android generated files
+android/.gradle/
+android/**/build/
+android/local.properties
+android/.idea/
+
+# Temporary APKs and extracted APK patches
+installed-qcare.apk
+apk-patch/
+
+# Temporary and backup files
+*.backup
+*.bak
+*.tmp
+
+# Node.js dependencies
+node_modules/
+
+# Android and Gradle build output
+android/.gradle/
+android/**/build/
+
+# Generated APKs and signatures
+*.apk
+*.apk.idsig
+*.idsig
+
+# Generated patch artifacts
+apk-patch/
+# Local backups and diagnostic files
+_backup_v8/
+qcare_recon*.txt
+backend/test.jpg
+backend/*backup*.py
+backend/*legacy*

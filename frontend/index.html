@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f7fbfa"><title>Q-Care — Thoughtful health follow-up</title>
+<style>
+:root{--ink:#173431;--muted:#687c78;--teal:#0d8b7c;--teal2:#dff5ef;--line:#e2ece9;--paper:#fff;--bg:#f6faf9;--amber:#b7791f;--red:#c33e45;--shadow:0 18px 55px #174c4210}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:var(--bg)}button,input,textarea,select{font:inherit}button{cursor:pointer}button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid #55b9ac;outline-offset:3px}.hidden{display:none!important}.muted{color:var(--muted)}.small{font-size:12px;line-height:1.5}.eyebrow{text-transform:uppercase;letter-spacing:.13em;font-size:11px;font-weight:800;color:var(--teal)}.btn{border:1px solid var(--line);background:white;color:var(--ink);border-radius:13px;padding:11px 15px;font-weight:700;transition:transform .2s,box-shadow .2s}.btn:hover{transform:translateY(-1px);box-shadow:0 8px 20px #174c4210}.btn.primary{background:var(--teal);color:white;border-color:var(--teal)}.btn.soft{background:var(--teal2);border-color:transparent;color:#12695f}.brand{display:flex;align-items:center;gap:10px;font-weight:850;letter-spacing:-.04em}.brand-mark{width:35px;height:35px;border-radius:12px;background:var(--teal);color:white;display:grid;place-items:center;font-size:21px;box-shadow:0 7px 18px #0d8b7c30}.landing{overflow:hidden}.nav{height:76px;max-width:1180px;padding:0 28px;margin:auto;display:flex;align-items:center;justify-content:space-between;position:relative;z-index:2}.navlinks{display:flex;align-items:center;gap:26px;font-size:13px}.navlinks a{color:var(--muted);text-decoration:none}.hero{max-width:1180px;padding:76px 28px 86px;margin:auto;display:grid;grid-template-columns:1.04fr .96fr;gap:48px;align-items:center;min-height:530px}.hero h1{font-size:clamp(42px,6vw,72px);letter-spacing:-.065em;line-height:1.01;margin:18px 0}.hero p{max-width:530px;font-size:17px;line-height:1.75;color:var(--muted)}.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:25px}.hero-note{font-size:12px!important;margin-top:18px}.visual{min-height:370px;position:relative;display:grid;place-items:center}.orb{position:absolute;width:300px;height:300px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#fff 0,#d9f6ef 32%,#a5e4d8 68%,#c8f1e7 100%);filter:blur(.2px);animation:float 7s ease-in-out infinite}.orbit{position:absolute;width:350px;height:230px;border:1px solid #a6dcd1;border-radius:50%;transform:rotate(-25deg);animation:spin 22s linear infinite}.float-card{position:absolute;background:#ffffffec;backdrop-filter:blur(10px);border:1px solid #fff;border-radius:18px;padding:16px 18px;box-shadow:var(--shadow);animation:float 6s ease-in-out infinite}.float-card.one{top:45px;left:0}.float-card.two{bottom:36px;right:0;animation-delay:-2s}.float-card strong{display:block;margin-bottom:5px}.float-icon{display:inline-grid;place-items:center;width:31px;height:31px;border-radius:10px;background:var(--teal2);color:var(--teal);margin-right:8px}.section{max-width:1180px;margin:auto;padding:64px 28px}.section-head{max-width:640px;margin-bottom:30px}.section h2{font-size:clamp(28px,4vw,43px);letter-spacing:-.045em;margin:9px 0 12px}.section p{color:var(--muted);line-height:1.7}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.info-card{background:white;border:1px solid var(--line);border-radius:22px;padding:25px;box-shadow:0 8px 30px #174c4205}.info-card .symbol{font-size:24px;margin-bottom:16px}.info-card h3{margin:0 0 8px}.safety-band{background:#eaf6f2;border:1px solid #d8eee7;border-radius:22px;padding:24px 26px;display:flex;gap:18px;align-items:flex-start}.footer{border-top:1px solid var(--line);padding:26px;text-align:center;color:var(--muted);font-size:12px}.app{min-height:100vh;display:grid;grid-template-columns:250px minmax(0,1fr);background:#f8fbfa}.sidebar{background:#f0f7f5;border-right:1px solid var(--line);padding:20px 14px;display:flex;flex-direction:column;gap:20px;min-height:100vh}.side-top{padding:0 8px;display:flex;align-items:center;justify-content:space-between}.side-nav{display:grid;gap:5px}.navbtn{display:flex;align-items:center;gap:11px;text-align:left;border:0;background:transparent;padding:12px;border-radius:12px;color:#5c716c;font-weight:650}.navbtn.active,.navbtn:hover{background:white;color:var(--teal);box-shadow:0 4px 14px #174c4208}.side-bottom{margin-top:auto;border-top:1px solid var(--line);padding:16px 8px 0}.demo-pill{font-size:11px;color:#687c78;background:#fff;border:1px solid var(--line);border-radius:99px;padding:5px 9px;display:inline-block}.main{min-width:0;display:flex;flex-direction:column;min-height:100vh}.topbar{height:67px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 26px;background:#ffffffd9;backdrop-filter:blur(12px);position:sticky;top:0;z-index:2}.content{width:min(100%,1000px);margin:0 auto;padding:28px;flex:1}.view-title{font-size:28px;letter-spacing:-.04em;margin:0 0 7px}.view-subtitle{margin:0 0 24px;color:var(--muted);line-height:1.6}.chat-layout{display:flex;flex-direction:column;min-height:calc(100vh - 125px)}.messages{display:flex;flex-direction:column;gap:18px;padding:15px 0 26px;flex:1}.message{display:flex;gap:11px;align-items:flex-start;max-width:850px;animation:rise .25s ease-out}.message.user{align-self:flex-end;flex-direction:row-reverse}.avatar{width:33px;height:33px;flex:0 0 33px;border-radius:11px;background:var(--teal2);color:var(--teal);display:grid;place-items:center;font-weight:800;font-size:12px}.user .avatar{background:#e8edeb;color:#47615b}.bubble{background:white;border:1px solid var(--line);border-radius:4px 16px 16px 16px;padding:13px 16px;line-height:1.65;white-space:pre-wrap;overflow-wrap:anywhere;max-width:min(700px,78vw)}.user .bubble{background:#e1f5ef;border-color:#d7eee7;border-radius:16px 4px 16px 16px}.chat-compose{position:sticky;bottom:0;background:linear-gradient(#f8fbfa00,#f8fbfa 18%);padding:18px 0 10px}.compose-box{display:flex;align-items:flex-end;gap:10px;background:white;border:1px solid #dbe8e4;border-radius:19px;padding:10px;box-shadow:0 10px 35px #174c420b}.compose-box textarea{border:0;outline:0;resize:vertical;min-height:44px;max-height:160px;flex:1;padding:10px;color:var(--ink);background:transparent}.compose-box textarea:focus{outline:none}.quick-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}.quick-actions button{font-size:12px;padding:8px 11px}.panel{background:white;border:1px solid var(--line);border-radius:20px;padding:22px;box-shadow:0 8px 30px #174c4205;margin-bottom:16px}.panel h3{margin:0 0 8px}.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.field{display:grid;gap:7px;margin:13px 0}.field label{font-size:13px;font-weight:700}.field input,.field textarea,.field select{border:1px solid var(--line);border-radius:12px;padding:12px;background:#fcfefd;color:var(--ink);width:100%}.field textarea{min-height:115px;resize:vertical}.status{border-radius:13px;padding:12px 14px;background:#f0f7f5;color:#42635b;font-size:13px;line-height:1.5}.status.warn{background:#fff4df;color:#855b17}.status.error{background:#fff0f0;color:#a33339}.meter-row{display:flex;align-items:center;gap:15px}.meter-number{font-size:36px;font-weight:850;letter-spacing:-.06em;min-width:82px}.meter-track{height:12px;border-radius:99px;background:#edf2f0;overflow:hidden;flex:1}.meter-fill{height:100%;width:0;background:var(--teal);border-radius:99px;transition:width .6s ease,background .3s}.timeline{border-left:2px solid #d9ece6;margin:18px 0 0 8px;padding-left:22px;display:grid;gap:22px}.timeline-item{position:relative}.timeline-item:before{content:"";position:absolute;width:10px;height:10px;border-radius:50%;background:var(--teal);left:-28px;top:5px;box-shadow:0 0 0 4px #e6f6f1}.timeline-item h4{margin:0 0 5px}.timeline-item p{margin:0;color:var(--muted);line-height:1.6;font-size:14px}.record-meta{font-size:12px;color:var(--muted);margin-bottom:6px}.source-item{padding:12px 0;border-bottom:1px solid var(--line);overflow-wrap:anywhere}.source-item:last-child{border-bottom:0}.source-item a{color:var(--teal)}.modal-backdrop{position:fixed;inset:0;background:#143d36a8;backdrop-filter:blur(6px);display:grid;place-items:center;padding:20px;z-index:10}.modal{width:min(100%,430px);background:white;border-radius:24px;padding:30px;box-shadow:0 30px 100px #092f293d}.modal h2{font-size:30px;letter-spacing:-.05em;margin:12px 0}.modal p{color:var(--muted);line-height:1.65}.toast{position:fixed;bottom:22px;right:22px;max-width:min(380px,calc(100vw - 44px));background:#173f38;color:white;border-radius:14px;padding:13px 17px;box-shadow:var(--shadow);z-index:20;font-size:13px;animation:rise .2s ease-out}.loading{opacity:.65;pointer-events:none}.tag{font-size:11px;font-weight:800;padding:5px 8px;border-radius:8px;background:#eef6f3;color:#397268}.sample-label{color:#94651c;background:#fff5df}.bottom-nav-toggle{display:none}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-11px)}}@keyframes spin{to{transform:rotate(335deg)}}@keyframes rise{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}@keyframes emg-in{from{opacity:0;transform:scaleY(.5) translateY(14px)}to{opacity:1;transform:scaleY(1) translateY(0)}}@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}}@media(max-width:850px){.hero{grid-template-columns:1fr;padding-top:48px;gap:10px}.visual{min-height:300px}.cards{grid-template-columns:1fr}.app{grid-template-columns:72px minmax(0,1fr)}.sidebar{padding:18px 9px}.side-top{justify-content:center;padding:0}.side-top .brand-name,.navbtn .nav-label,.side-bottom,.new-chat-label{display:none}.navbtn{justify-content:center;padding:13px 6px;font-size:18px}.navbtn .nav-icon{font-size:19px}.topbar{padding:0 16px}.content{padding:20px 16px}.grid2{grid-template-columns:1fr}}@media(max-width:540px){.nav{padding:0 18px}.navlinks a:not(.keep){display:none}.hero{padding:45px 20px 45px}.hero h1{font-size:46px}.visual{min-height:270px;transform:scale(.9)}.section{padding:45px 20px}.app{grid-template-columns:1fr}.sidebar{min-height:0;height:auto;position:fixed;bottom:0;left:0;right:0;z-index:5;border-right:0;border-top:1px solid var(--line);padding:7px 9px;background:#f5faf8ed;backdrop-filter:blur(15px)}.side-top,.side-bottom{display:none}.side-nav{display:flex;justify-content:space-around;gap:3px}.navbtn{display:flex;flex-direction:column;gap:4px;padding:7px 5px;flex:1;font-size:10px}.navbtn .nav-label{display:block!important;font-size:10px}.navbtn .nav-icon{font-size:17px}.main{padding-bottom:66px}.topbar{height:58px}.content{padding:17px 13px}.bubble{max-width:80vw}.float-card.one{left:-5px}.float-card.two{right:-5px}.meter-number{font-size:30px;min-width:72px}}
+.emg-scale{background:rgba(255,255,255,.94);backdrop-filter:blur(18px);border:1px solid rgba(209,228,222,.9);border-radius:18px;padding:14px 18px 11px;margin-bottom:10px;box-shadow:0 6px 28px rgba(23,76,66,.09);animation:emg-in .4s cubic-bezier(.34,1.56,.64,1) both;transform-origin:bottom center;overflow:hidden}.emg-scale.hidden{display:none!important}.emg-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:9px}.emg-title{font-size:10px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}.emg-badge{display:flex;align-items:center;gap:7px}.emg-num{font-size:24px;font-weight:850;letter-spacing:-.05em;line-height:1;transition:color .5s ease}.emg-slash{font-size:12px;color:var(--muted);font-weight:700}.emg-label{font-size:11px;font-weight:800;padding:3px 10px;border-radius:99px;transition:background .45s,color .45s;white-space:nowrap}.emg-bar-track{height:9px;border-radius:99px;background:#edf2f0;overflow:hidden;margin-bottom:6px}.emg-bar-fill{height:100%;width:0;border-radius:99px;transition:width .75s cubic-bezier(.34,1.2,.64,1),background .5s ease}.emg-segments{display:flex;justify-content:space-between;padding:0 1px}.emg-seg{font-size:9px;color:#c5d5cf;font-weight:700;cursor:default;user-select:none}.emg-disclaimer{font-size:10px;color:var(--muted);line-height:1.5;margin-top:7px;border-top:1px solid var(--line);padding-top:7px}
+</style></head><body>
+<div id="landing" class="landing">
+<header class="nav"><div class="brand"><span class="brand-mark">✳</span><span>Q-Care</span></div><nav class="navlinks"><a href="#idea">The idea</a><a href="#process">How it works</a><a href="#safety">Safety first</a><button class="btn primary" id="navOpen">Open Q-Care ↗</button></nav></header>
+<section class="hero"><div><div class="eyebrow">Thoughtful follow-up, made simple</div><h1>Health conversations that help you <span style="color:var(--teal)">keep track.</span></h1><p>Q-Care is an experimental health-information demo that brings symptom notes, evidence context, follow-up reminders and a simple health timeline into one calm workspace.</p><div class="hero-actions"><button class="btn primary" id="heroOpen">Explore the demo <span aria-hidden="true">→</span></button><a class="btn" href="#process" style="text-decoration:none;display:inline-flex;align-items:center">See how it works</a></div><p class="hero-note">A student prototype for demonstration — not a medical device or a replacement for professional care.</p></div><div class="visual" aria-hidden="true"><div class="orb"></div><div class="orbit"></div><div class="float-card one"><div><span class="float-icon">♡</span><strong style="display:inline">A little more context</strong></div><div class="small muted" style="margin:8px 0 0 39px">Keep notes together over time</div></div><div class="float-card two"><div class="small muted">FOLLOW-UP</div><strong style="font-size:17px;margin-top:6px">How are you feeling now?</strong><div class="small" style="color:var(--teal);margin-top:5px">Check in, at your pace ↗</div></div></div></section>
+<section class="section" id="idea"><div class="section-head"><div class="eyebrow">The idea</div><h2>One place for the little details.</h2><p>When you're tracking a concern, dates and follow-up notes can be useful context to share with a qualified healthcare professional.</p></div><div class="cards"><article class="info-card"><div class="symbol">✦</div><h3>Conversation</h3><p>Record what you want to ask and explore information provided by the connected service.</p></article><article class="info-card"><div class="symbol">▤</div><h3>Health Card</h3><p>See dated notes and example history in a clear timeline that can be printed.</p></article><article class="info-card"><div class="symbol">◷</div><h3>Follow-up</h3><p>Keep local reminders and check whether your notes have changed over time.</p></article></div></section>
+<section class="section" id="process"><div class="section-head"><div class="eyebrow">How it works</div><h2>From a note to a follow-up.</h2><p>The interface displays information returned by the local Q-Care backend. When data isn't available, it says so rather than guessing.</p></div><div class="cards"><article class="info-card"><div class="symbol">01</div><h3>Share context</h3><p>Describe a concern in your own words or use the image-assessment demo.</p></article><article class="info-card"><div class="symbol">02</div><h3>Review information</h3><p>Inspect returned evidence context and any urgency information the backend actually provides.</p></article><article class="info-card"><div class="symbol">03</div><h3>Keep a record</h3><p>Use the Health Card and local reminders to organise follow-up notes.</p></article></div></section>
+<section class="section" id="safety"><div class="safety-band"><div style="font-size:26px">ⓘ</div><div><strong>Safety comes first.</strong><p style="margin:7px 0 0">Q-Care is experimental and not clinically validated. Its urgency indicator, if available, is not a diagnosis or a guarantee of safety. Do not use a low score to rule out a serious problem. For severe, rapidly worsening or worrying symptoms, seek help from a qualified healthcare professional or local emergency services.</p></div></div></section>
+<footer class="footer">Q-Care prototype · Sample data is fictional · Not for diagnosis or emergency decision-making</footer></div>
+<div id="app" class="app hidden"><aside class="sidebar"><div class="side-top"><div class="brand"><span class="brand-mark">✳</span><span class="brand-name">Q-Care</span></div></div><nav class="side-nav" aria-label="Q-Care navigation"><button class="navbtn active" data-view="chat"><span class="nav-icon">＋</span><span class="nav-label">New chat</span></button><button class="navbtn" data-view="health"><span class="nav-icon">♡</span><span class="nav-label">Health Card</span></button><button class="navbtn" data-view="evidence"><span class="nav-icon">⌕</span><span class="nav-label">Evidence</span></button><button class="navbtn" data-view="image"><span class="nav-icon">▧</span><span class="nav-label">Image check</span></button><button class="navbtn" data-view="reminders"><span class="nav-icon">◷</span><span class="nav-label">Reminders</span></button><button class="navbtn" data-view="about"><span class="nav-icon">ⓘ</span><span class="nav-label">Safety & about</span></button></nav><div class="side-bottom"><span class="demo-pill">Demo mode · Not secure authentication</span><p class="small muted">Reminders are stored in this browser only.</p></div></aside><main class="main"><header class="topbar"><div><strong id="topTitle">Conversation</strong><div class="small muted" id="topSubtitle">Precautionary health information</div></div><div style="display:flex;align-items:center;gap:9px"><span class="tag" id="apiStatus">Checking backend…</span><button class="btn" id="exitApp">Exit</button></div></header><div class="content" id="content"></div></main></div>
+<div id="nameModal" class="modal-backdrop hidden" role="dialog" aria-modal="true" aria-labelledby="welcomeTitle"><div class="modal"><div class="brand"><span class="brand-mark">✳</span><span>Q-Care</span></div><div class="eyebrow" style="margin-top:25px">Demo workspace</div><h2 id="welcomeTitle">Let's get started.</h2><p>Enter a display name to personalise this demo. This is not an account, and it does not verify your identity.</p><form id="nameForm"><div class="field"><label for="displayName">What should we call you?</label><input id="displayName" name="displayName" maxlength="48" autocomplete="nickname" placeholder="Your display name" required></div><button class="btn primary" type="submit" style="width:100%">Enter Q-Care →</button></form><p class="small">Please use fictional information for presentations. Avoid entering sensitive personal health information.</p></div></div><div id="toast" class="toast hidden" role="status" aria-live="polite"></div>
+<script>
+'use strict';
+const API_BASE=(location.protocol==='file:'||location.port!=='5000')?'http://127.0.0.1:5000':'';
+const $=s=>document.querySelector(s);const $$=s=>Array.from(document.querySelectorAll(s));
+let displayName='Guest',latestAssessment=null,latestHealthCard=null,currentView='chat',chatStarted=false,emergencyScore=null;
+const sampleCard={demo:true,summary:'Example record: mild headache and tiredness',events:[{date:'2026-09-12',title:'Symptoms first noted',note:'Fictional example: mild headache and tiredness recorded.'},{date:'2026-09-13',title:'Follow-up note',note:'Fictional example: symptoms reported as improving.'},{date:'2026-09-14',title:'Marked resolved',note:'Fictional example: symptoms no longer reported.'}],meterHistory:[{date:'2026-09-12',score:3},{date:'2026-09-13',score:2}],status:'Resolved · fictional example'};
+function esc(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function toast(msg){const t=$('#toast');t.textContent=msg;t.classList.remove('hidden');clearTimeout(toast.timer);toast.timer=setTimeout(()=>t.classList.add('hidden'),3600)}
+async function api(path,options={}){const res=await fetch(API_BASE+path,options);let data;try{data=await res.json()}catch{throw new Error('The backend returned an unreadable response.')}if(!res.ok||data.status==='error')throw new Error(data.message||`Request failed (${res.status})`);return data}
+async function checkBackend(){const tag=$('#apiStatus');try{const d=await api('/health');tag.textContent='Backend connected · '+(d.version||'OK');tag.style.color='#087f70'}catch{tag.textContent='Backend offline';tag.style.color='#b54708'}}
+function openDemo(){if(!$('#app').classList.contains('hidden'))return;$('#nameModal').classList.remove('hidden');$('#displayName').focus()}
+$('#navOpen').addEventListener('click',openDemo);$('#heroOpen').addEventListener('click',openDemo);
+$('#nameForm').addEventListener('submit',e=>{e.preventDefault();displayName=$('#displayName').value.trim().slice(0,48)||'Guest';$('#landing').classList.add('hidden');$('#app').classList.remove('hidden');$('#nameModal').classList.add('hidden');renderView('chat');checkBackend()});
+$('#exitApp').addEventListener('click',()=>{if(confirm('Exit the demo and return to the landing page?')){ $('#app').classList.add('hidden');$('#landing').classList.remove('hidden');}});
+$$('.navbtn').forEach(b=>b.addEventListener('click',()=>renderView(b.dataset.view)));
+function setTitle(title,sub){$('#topTitle').textContent=title;$('#topSubtitle').textContent=sub||'Precautionary health information'}
+function renderView(view){currentView=view;$$('.navbtn').forEach(b=>b.classList.toggle('active',b.dataset.view===view));const c=$('#content');c.innerHTML='';if(view==='chat')renderChat(c);if(view==='health')renderHealth(c);if(view==='evidence')renderEvidence(c);if(view==='image')renderImage(c);if(view==='reminders')renderReminders(c);if(view==='about')renderAbout(c);}
+function renderChat(c){
+  setTitle('Conversation','Precautionary health information');
+  c.innerHTML=`<div class="chat-layout"><div class="messages" id="messages"></div><div class="chat-compose">
+<div class="emg-scale hidden" id="emgScale" role="status" aria-label="Emergency urgency scale">
+  <div class="emg-header">
+    <span class="emg-title">Emergency Scale</span>
+    <div class="emg-badge">
+      <span class="emg-num" id="emgNum">—</span><span class="emg-slash">/10</span>
+      <span class="emg-label" id="emgLabel">Analysing…</span>
+    </div>
+  </div>
+  <div class="emg-bar-track"><div class="emg-bar-fill" id="emgFill"></div></div>
+  <div class="emg-segments" aria-hidden="true"><span class="emg-seg">1</span><span class="emg-seg">2</span><span class="emg-seg">3</span><span class="emg-seg">4</span><span class="emg-seg">5</span><span class="emg-seg">6</span><span class="emg-seg">7</span><span class="emg-seg">8</span><span class="emg-seg">9</span><span class="emg-seg">10</span></div>
+  <p class="emg-disclaimer">Precautionary indicator only — not a diagnosis. Do not rely on a low score to rule out a serious condition. Seek help immediately if you are concerned.</p>
+</div>
+<form id="chatForm"><div class="compose-box"><textarea id="chatInput" rows="1" maxlength="3000" placeholder="Tell Q-Care what you'd like information about…" aria-label="Your message"></textarea><button class="btn primary" id="sendBtn" type="submit" aria-label="Send message">↑ Send</button></div></form><div class="quick-actions"><button class="btn" id="quickAssess">Run assessment</button><button class="btn" id="quickCard">View Health Card</button><button class="btn" id="quickSafety">Safety information</button></div><p class="small muted">Q-Care is experimental, not a diagnosis. If symptoms are severe or rapidly worsening, seek appropriate medical help.</p></div></div>`;
+  const m=$('#messages');
+  if(!chatStarted){addMessage('assistant',`Hi ${displayName} — how are you feeling today? You can describe what you'd like information about. I'll share the information returned by Q-Care's connected service, but I can't diagnose or confirm whether a symptom is safe.`);chatStarted=true;}else{addMessage('assistant',`Welcome back, ${displayName}. What would you like to explore?`)}
+  // Restore emergency scale if already computed
+  if(emergencyScore!==null) updateEmergencyScale(emergencyScore);
+  $('#chatForm').addEventListener('submit',sendChat);
+  $('#chatInput').addEventListener('keydown',e=>{if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();$('#chatForm').requestSubmit()}});
+  $('#quickAssess').addEventListener('click',()=>{const text=$('#chatInput').value.trim();if(!text){toast('Add a description first, then run the assessment.');$('#chatInput').focus();return}runAssessment(text,true)});
+  $('#quickCard').addEventListener('click',()=>renderView('health'));
+  $('#quickSafety').addEventListener('click',()=>renderView('about'));
+}
+function updateEmergencyScale(score){
+  const scaleEl=$('#emgScale');
+  if(!scaleEl)return;
+  if(!Number.isFinite(score)||score<1||score>10){scaleEl.classList.add('hidden');return;}
+  const s=Math.round(score);
+  const color=s<=3?'#1a9e7c':s<=5?'#50a060':s<=7?'#d97727':s<=9?'#d95b27':'#c33e45';
+  const bg=s<=3?'#e3f7ef':s<=5?'#eaf5ea':s<=7?'#fff3e0':s<=9?'#fff0e0':'#fff0f0';
+  const labelText=s<=2?'No urgency':s<=4?'Monitor symptoms':s<=6?'Consider seeing a doctor':s<=8?'See a doctor soon':s<=9?'Urgent — see a doctor now':'Emergency — seek help immediately';
+  const numEl=$('#emgNum'),fillEl=$('#emgFill'),labelEl=$('#emgLabel');
+  scaleEl.classList.remove('hidden');
+  scaleEl.style.borderColor=color+'33';
+  if(numEl){numEl.textContent=s;numEl.style.color=color;}
+  if(fillEl){fillEl.style.width=(s*10)+'%';fillEl.style.background=`linear-gradient(90deg,${color}aa,${color})`;}
+  if(labelEl){labelEl.textContent=labelText;labelEl.style.background=bg;labelEl.style.color=color;}
+}
+function addMessage(role,text){const m=$('#messages');if(!m)return;const el=document.createElement('div');el.className='message '+(role==='user'?'user':'assistant');const av=document.createElement('div');av.className='avatar';av.textContent=role==='user'?(displayName.slice(0,1).toUpperCase()||'U'):'Q';const bubble=document.createElement('div');bubble.className='bubble';bubble.textContent=text;el.append(av,bubble);m.appendChild(el);el.scrollIntoView({behavior:'smooth',block:'nearest'});return el}
+
+async function sendChat(e) {
+    e.preventDefault();
+
+    const input = $('#chatInput');
+    const text = input.value.trim();
+
+    if (!text) return;
+
+    // Request notification permission during user interaction.
+    if ('Notification' in window &&
+        Notification.permission === 'default') {
+        try {
+            await Notification.requestPermission();
+        } catch (_) {
+            // The in-page reminder still works without permission.
+        }
+    }
+
+    input.value = '';
+    addMessage('user', text);
+
+    // Schedule an automatic follow-up for this message.
+    scheduleAutoFollowUp();
+
+    const pending = addMessage(
+        'assistant',
+        'Q-Care is preparing a response…'
+    );
+
+    $('#sendBtn').disabled = true;
+
+    try {
+        const d = await api('/api/chat', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ text })
+        });
+
+        const reply =
+            d.reply ||
+            d.message ||
+            d.response ||
+            'The service returned no reply text.';
+
+        pending.querySelector('.bubble').textContent = reply;
+
+        // Update emergency scale widget
+        const score = typeof d.emergency_score === 'number' ? d.emergency_score : null;
+        if (score !== null) {
+            emergencyScore = score;
+            updateEmergencyScale(score);
+        }
+
+    } catch (err) {
+        pending.querySelector('.bubble').textContent =
+            'I could not reach the Q-Care service: ' +
+            err.message +
+            '\n\nCheck that the Flask backend is running, then try again.';
+
+    } finally {
+        const sendButton = $('#sendBtn');
+
+        if (sendButton) {
+            sendButton.disabled = false;
+        }
+    }
+}
+
+function scheduleAutoFollowUp() {
+    const reminder = {
+        id: Date.now() + '-' +
+            Math.random().toString(36).slice(2, 8),
+        title: 'How are you feeling now?',
+        due: Date.now() + 60_000,
+        done: false,
+        source: 'automatic-demo'
+    };
+
+    // Store the reminder in browser storage.
+    const reminders = loadReminders();
+    reminders.push(reminder);
+    saveReminders(reminders);
+
+    toast('Automatic follow-up scheduled for about 1 minute.');
+
+    // Demonstration timer: the page must remain open.
+    window.setTimeout(() => {
+        const latest = loadReminders();
+
+        const current = latest.find(
+            item => item.id === reminder.id
+        );
+
+        if (!current || current.done) return;
+
+        current.notified = true;
+        saveReminders(latest);
+
+        const message = 'How are you feeling now?';
+
+        if (
+            'Notification' in window &&
+            Notification.permission === 'granted'
+        ) {
+            try {
+                const notification = new Notification(
+                    'Q-Care · Follow-up',
+                    {
+                        body: message,
+                        tag: 'qcare-' + reminder.id
+                    }
+                );
+
+                notification.onclick = () => {
+                    window.focus();
+                    notification.close();
+                    toast(message);
+                };
+            } catch (_) {
+                toast('Q-Care follow-up: ' + message);
+            }
+        } else {
+            toast('Q-Care follow-up: ' + message);
+        }
+
+        // Add the follow-up to chat if the chat is open.
+        if (currentView === 'chat') {
+            addMessage(
+                'assistant',
+                message +
+                '\n\nThis is a presentation follow-up. ' +
+                'You can record how you feel in the conversation. ' +
+                'Do not wait for a reminder if you need medical help.'
+            );
+        }
+    }, 60_000);
+}
+
+function findScore(d){const candidates=[d?.pipeline?.analysis?.urgency_score,d?.pipeline?.analysis?.urgency,d?.pipeline?.safety?.urgency_score,d?.pipeline?.safety?.score,d?.pipeline?.urgency_score,d?.urgency_score,d?.urgency?.score,d?.meter?.score];for(const v of candidates){const n=typeof v==='number'?v:(typeof v==='string'&&v.trim()!==''?Number(v):NaN);if(Number.isFinite(n)&&n>=1&&n<=10)return Math.round(n)}return null}
+function urgencyMarkup(score){if(!Number.isInteger(score)||score<1||score>10)return `<div class="status warn">No valid urgency score was returned by the backend. Q-Care won't guess a number. A low or missing score must not be used to rule out a serious problem.</div>`;const color=score<=3?'#218768':score<=6?'#c28b22':score<=8?'#d97727':'#c33e45';const label=score<=3?'Lower apparent urgency':score<=6?'Consider medical advice':score<=8?'Prompt medical assessment':'Emergency concern';return `<div class="meter-row"><div class="meter-number" style="color:${color}">${score}<span style="font-size:17px;color:var(--muted)">/10</span></div><div class="meter-track"><div class="meter-fill" style="width:${score*10}%;background:${color}"></div></div></div><p style="margin:12px 0 5px"><strong>${label}</strong></p><p class="small muted">Experimental precautionary indicator only — not a diagnosis or a guarantee of safety. Seek urgent help for severe or rapidly worsening symptoms regardless of the score.</p>`}
+function extractSummary(d){const a=d?.pipeline?.analysis||{};const r=a.recommendation;return a.summary||(typeof r==='string'?r:r?.action)||a.safety?.recommendation||a.evidence?.recommendation||d?.summary||'Assessment completed; review the returned details below.'}
+function extractConfidence(d){const ec=d?.pipeline?.evidence_confidence||d?.pipeline?.evidence_gate||{};return ec.confidence_label||ec.interpretation||ec.message||'Evidence confidence was not provided.'}
+async function runAssessment(text,fromChat=false){if(fromChat)addMessage('assistant','Running the assessment with the connected Q-Care backend…');try{const d=await api('/api/assess',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({text})});latestAssessment=d;if(fromChat){addMessage('assistant','Assessment result: '+extractSummary(d)+'\n\nEvidence context: '+extractConfidence(d)+'\n\n'+(findScore(d)===null?'Urgency score: unavailable from backend.':'Urgency score returned by backend: '+findScore(d)+'/10')+'\n\nThis is precautionary information, not a diagnosis.');}else{renderView('evidence')}toast('Assessment response received from backend.')}catch(err){if(fromChat)addMessage('assistant','Assessment could not be completed: '+err.message);else toast('Assessment failed: '+err.message)}}
+function renderEvidence(c){setTitle('Evidence & assessment','Information returned by the backend');c.innerHTML=`<h1 class="view-title">Evidence & assessment</h1><p class="view-subtitle">Submit a description to inspect the response from the connected Q-Care pipeline. This is not clinical validation.</p><section class="panel"><form id="assessForm"><div class="field"><label for="assessText">What would you like to assess?</label><textarea id="assessText" required maxlength="3000" placeholder="Describe the concern or question…"></textarea></div><button class="btn primary" type="submit">Run assessment →</button></form></section><div id="assessmentResult"></div>`;if(latestAssessment)showAssessment(latestAssessment);$('#assessForm').addEventListener('submit',async e=>{e.preventDefault();await runAssessment($('#assessText').value.trim(),false)})}
+function showAssessment(d){const box=$('#assessmentResult');if(!box)return;const score=findScore(d);const pipeline=d?.pipeline||{};const evidence=pipeline.evidence_gate||pipeline.ranked_evidence||pipeline.evidence||null;box.innerHTML=`<section class="panel"><div class="eyebrow">Backend response</div><h3>Assessment summary</h3><p style="line-height:1.7">${esc(extractSummary(d))}</p><div class="status">Evidence context: ${esc(extractConfidence(d))}</div><h3 style="margin-top:22px">Care urgency meter</h3>${urgencyMarkup(score)}</section><section class="panel"><h3>Evidence details</h3><p class="small muted">Only fields actually returned by the backend are shown.</p><div id="evidenceDetails"></div></section><button class="btn primary" id="saveAssessmentCard">Open Health Card</button>`;const details=$('#evidenceDetails');if(evidence){const accepted=Array.isArray(evidence.accepted)?evidence.accepted:[];const rejected=Array.isArray(evidence.rejected)?evidence.rejected:[];details.innerHTML=`<div class="grid2"><div class="status">Accepted items: ${Number.isFinite(evidence.accepted_count)?evidence.accepted_count:accepted.length}</div><div class="status">Rejected items: ${Number.isFinite(evidence.rejected_count)?evidence.rejected_count:rejected.length}</div></div><p class="small muted">${esc(evidence.message||'')}</p>`;[...accepted,...rejected].slice(0,10).forEach(item=>{const title=typeof item==='string'?item:(item.title||item.name||item.source||'Evidence item');const url=typeof item==='object'?(item.url||item.link||''):'';const row=document.createElement('div');row.className='source-item';const strong=document.createElement('strong');strong.textContent=title;row.appendChild(strong);if(url&&/^https?:\/\//i.test(url)){row.appendChild(document.createElement('br'));const a=document.createElement('a');a.href=url;a.target='_blank';a.rel='noopener noreferrer';a.textContent=url;row.appendChild(a)}details.appendChild(row)});if(!accepted.length&&!rejected.length)details.insertAdjacentHTML('beforeend','<p class="muted small">The backend did not provide individual evidence items.</p>')}else{details.textContent='No structured evidence details were returned in a recognised field.'}$('#saveAssessmentCard').addEventListener('click',()=>renderView('health'))}
+function renderImage(c){setTitle('Image assessment','Upload an image to the connected backend');c.innerHTML=`<h1 class="view-title">Image assessment</h1><p class="view-subtitle">Upload an image for the backend's image-information feature. Do not use this tool to diagnose a condition or decide whether urgent care is needed.</p><section class="panel"><form id="imageForm"><div class="field"><label for="imageFile">Choose image</label><input id="imageFile" type="file" accept="image/jpeg,image/png,image/webp" required><div class="small muted">JPEG, PNG or WEBP · Maximum 8 MB</div></div><button class="btn primary" type="submit">Submit image →</button></form></section><div id="imageResult"></div>`;$('#imageForm').addEventListener('submit',async e=>{e.preventDefault();const file=$('#imageFile').files[0];if(!file)return;if(!['image/jpeg','image/png','image/webp'].includes(file.type)){toast('Choose a JPEG, PNG, or WEBP image.');return}if(file.size>8*1024*1024){toast('Image is larger than 8 MB.');return}const result=$('#imageResult');result.innerHTML='<div class="status">Uploading image to Q-Care…</div>';const fd=new FormData();fd.append('image',file);try{const d=await api('/api/assess-image',{method:'POST',body:fd});result.innerHTML=`<section class="panel"><div class="eyebrow">Q-Care image response</div><h3>Information from Q-Care</h3><p style="line-height:1.7;white-space:pre-wrap">${esc(d.response||'No natural-language response was returned by the backend.')}</p><p class="small muted">Image output is experimental and is not a diagnosis. Seek professional advice for concerning symptoms.</p></section>`;toast('Image response received.')}catch(err){result.innerHTML='';const p=document.createElement('div');p.className='status error';p.textContent='Image assessment failed: '+err.message;result.appendChild(p)}})}
+function loadReminders(){try{const r=JSON.parse(localStorage.getItem('qcare-reminders-v1')||'[]');return Array.isArray(r)?r:[]}catch{return []}}function saveReminders(r){localStorage.setItem('qcare-reminders-v1',JSON.stringify(r))}
+function renderReminders(c){setTitle('Follow-up reminders','Stored in this browser only');c.innerHTML=`<h1 class="view-title">Follow-up reminders</h1><p class="view-subtitle">Create a short reminder for the presentation. This page stores reminders in this browser; it does not send push notifications or contact you when the browser is closed.</p><section class="panel"><form id="reminderForm"><div class="field"><label for="reminderTitle">Reminder title</label><input id="reminderTitle" maxlength="120" required placeholder="e.g. Check how I'm feeling"></div><div class="field"><label for="reminderMinutes">Demo interval</label><select id="reminderMinutes"><option value="1">1 minute</option><option value="2" selected>2 minutes</option><option value="5">5 minutes</option><option value="10">10 minutes</option></select></div><button class="btn primary" type="submit">Create reminder</button></form><p class="small muted">Use fictional demo details. A reminder is not medical monitoring and must never delay care.</p></section><div id="reminderList"></div>`;function draw(){const list=$('#reminderList');const items=loadReminders();list.innerHTML='<section class="panel"><h3>Your reminders</h3></section>';const panel=list.firstChild;if(!items.length){const p=document.createElement('p');p.className='muted small';p.textContent='No reminders yet.';panel.appendChild(p)}items.forEach((r,i)=>{const row=document.createElement('div');row.className='source-item';const title=document.createElement('strong');title.textContent=r.title;const p=document.createElement('p');p.className='small muted';p.textContent=(r.done?'Completed · ':'Scheduled · ')+new Date(r.due).toLocaleString();const del=document.createElement('button');del.className='btn';del.textContent=r.done?'Remove':'Mark complete';del.addEventListener('click',()=>{const next=loadReminders();if(next[i].done){next.splice(i,1)}else{next[i].done=true}saveReminders(next);draw()});row.append(title,p,del);panel.appendChild(row)})}draw();$('#reminderForm').addEventListener('submit',e=>{e.preventDefault();const title=$('#reminderTitle').value.trim();const minutes=Number($('#reminderMinutes').value);if(!title)return;const due=Date.now()+minutes*60000;const items=loadReminders();items.push({title,due,done:false});saveReminders(items);$('#reminderTitle').value='';draw();toast(`Reminder saved in this browser for about ${minutes} minute(s).`);setTimeout(()=>{const latest=loadReminders();const match=latest.find(r=>r.title===title&&!r.done&&r.due===due);if(match&&!document.hidden)toast('Follow-up reminder: '+title+' — how are you feeling now?')},minutes*60000)})}
+function renderHealth(c){setTitle('Health Card','Example timeline and available assessment records');const actual=latestAssessment;const sample=sampleCard;c.innerHTML=`<div style="display:flex;align-items:flex-start;justify-content:space-between;gap:12px;flex-wrap:wrap"><div><h1 class="view-title">My Health Card</h1><p class="view-subtitle">A simple timeline for organising notes and follow-up.</p></div><button class="btn" id="printCard">Print / Save PDF</button></div><section class="panel"><div style="display:flex;gap:13px;align-items:center"><div class="brand-mark" style="width:45px;height:45px;font-size:25px">♡</div><div><h3 style="margin:0">${esc(displayName)}'s Health Card</h3><div class="small muted">Demo profile · No account or secure medical record</div></div></div><div style="margin-top:17px"><span class="tag sample-label">Fictional preloaded example</span></div><p style="line-height:1.7;margin-bottom:0">${esc(sample.summary)}</p></section><section class="panel"><h3>Example timeline</h3><p class="small muted">The entries below are invented for the presentation and are not your medical history.</p><div class="timeline">${sample.events.map(ev=>`<div class="timeline-item"><div class="record-meta">${esc(ev.date)}</div><h4>${esc(ev.title)}</h4><p>${esc(ev.note)}</p></div>`).join('')}</div></section><section class="panel"><h3>Example urgency history</h3><p class="small muted">Illustrative values only — not backend assessments.</p>${sample.meterHistory.map(m=>`<div class="source-item"><div style="display:flex;justify-content:space-between;gap:10px"><strong>${esc(m.date)}</strong><strong>${m.score}/10</strong></div><div class="meter-track" style="margin-top:8px"><div class="meter-fill" style="width:${m.score*10}%"></div></div></div>`).join('')}<div class="status warn" style="margin-top:12px">A low score does not rule out a serious problem. The urgency meter is experimental and not clinically validated.</div></section><section class="panel"><h3>Latest connected assessment</h3><div id="latestActual"></div></section>`;if(actual){const box=$('#latestActual');const score=findScore(actual);box.innerHTML=`<div class="record-meta">Available in this session · Not a verified medical record</div><p style="line-height:1.7">${esc(extractSummary(actual))}</p><p class="small muted">Evidence context: ${esc(extractConfidence(actual))}</p>${urgencyMarkup(score)}<button class="btn primary" id="createBackendCard" style="margin-top:14px">Create backend Health Card</button><div id="backendCardResult" style="margin-top:14px"></div>`;$('#createBackendCard').addEventListener('click',async()=>{const out=$('#backendCardResult');out.textContent='Requesting Health Card from backend…';try{const d=await api('/api/health-card',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({assessment:actual})});latestHealthCard=d.health_card||d;out.innerHTML='';const card=latestHealthCard;const summary=card.summary||'No summary field returned.';const priority=card.priority||'Not provided';const confidence=card.confidence_interpretation||'Not provided';const disclaimer=card.disclaimer||'Not provided';const result=document.createElement('div');result.className='status';result.textContent=`Summary: ${summary}\nPriority: ${priority}\nConfidence interpretation: ${confidence}\nDisclaimer: ${disclaimer}`;result.style.whiteSpace='pre-wrap';out.appendChild(result);toast('Health Card response received from backend.')}catch(err){out.textContent='Health Card request failed: '+err.message;out.className='status error'}})}else{$('#latestActual').textContent='No real assessment has been saved in this session. Run an assessment to display its returned summary here.'}$('#printCard').addEventListener('click',()=>window.print())}
+function renderAbout(c){setTitle('Safety & about','Scope and limitations');c.innerHTML=`<h1 class="view-title">Safety & about</h1><p class="view-subtitle">Q-Care is a student prototype for organising health-information conversations and follow-up notes.</p><section class="panel"><h3>What Q-Care can do in this demo</h3><ul style="line-height:1.9;color:var(--muted)"><li>Send messages to the configured Flask backend.</li><li>Display assessment and evidence fields that the backend actually returns.</li><li>Upload a supported image to the image-assessment endpoint.</li><li>Show a fictional Health Card example and browser-local reminders.</li></ul></section><section class="panel"><h3>Important limitations</h3><ul style="line-height:1.9;color:var(--muted)"><li>Q-Care is not clinically validated and cannot diagnose or rule out disease.</li><li>The keyword-based safety logic may miss urgent situations.</li><li>A score is shown only if a valid score is present in a recognised backend field.</li><li>Evidence confidence is not disease probability.</li><li>Sample Health Card entries are fictional and separate from actual assessment responses.</li><li>Reminders are stored locally and are not reliable medical monitoring.</li></ul></section><section class="safety-band"><div style="font-size:25px">⚠</div><div><strong>When in doubt, get help.</strong><p style="margin:7px 0 0">For severe, rapidly worsening or worrying symptoms, contact a qualified healthcare professional or local emergency services. Do not wait for a Q-Care score or reminder.</p></div></section>`}
+checkBackend();
+</script></body></html>
