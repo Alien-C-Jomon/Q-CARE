@@ -151,15 +151,10 @@ pip install -r requirements.txt
 
 ### 5. Configure environment variables
 
-Create a `.env` file in the location expected by the backend configuration. For example, if the application loads `backend/.env`, create it inside `backend`.
-
 Add your own API key:
 
-```env
-GEMINI_API_KEY=your_gemini_api_key_here
-```
+EXPLAINED DOWN BELOW! 
 
-Use the exact environment variable name expected by your configured application. Never commit `.env` files, private keys, or API credentials to GitHub.
 
 ### 6. Run Q-Care
 
