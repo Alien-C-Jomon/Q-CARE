@@ -173,6 +173,90 @@ Open the local address printed by Flask in your browser. If the application is c
 
 If startup fails, check the installed dependencies, environment variables, and backend error message.
 
+
+## 🔐 Gemini API Key Setup
+
+Q-Care uses the **Google Gemini API** for AI-powered conversation and image analysis.
+
+For security, **no API key is included in this repository**. Each user must provide their own Gemini API key locally.
+
+### 1. Get your Gemini API key
+
+Create your own Gemini API key through **Google AI Studio**.
+
+> **Never commit your API key to GitHub or share it publicly.**
+
+### 2. Set the Gemini API key
+
+Q-Care reads the Gemini API key from the **Windows User Environment Variable**:
+
+```text
+GEMINI_API_KEY
+```
+
+On Windows, open **Command Prompt** and set your own key with:
+
+```cmd
+setx GEMINI_API_KEY "YOUR_GEMINI_API_KEY_HERE"
+```
+
+Replace `YOUR_GEMINI_API_KEY_HERE` with your own Gemini API key.
+
+### 3. Restart your terminal
+
+After using `setx`, **close the current Command Prompt and open a new one**.
+
+Environment variables created with `setx` are available to newly opened terminals and applications.
+
+### 4. Verify the configuration safely
+
+Do **not** print the API key itself.
+
+Instead, run:
+
+```cmd
+if defined GEMINI_API_KEY (echo GEMINI_API_KEY=FOUND) else (echo GEMINI_API_KEY=NOT_FOUND)
+```
+
+You should see:
+
+```text
+GEMINI_API_KEY=FOUND
+```
+
+### 5. Start Q-Care
+
+Start the Q-Care backend normally after configuring the environment variable.
+
+The application reads the key through the environment rather than storing it inside the source code.
+
+### ⚠️ Security Warning
+
+Do **not**:
+
+- Put your API key directly into Python source code.
+- Commit an API key to GitHub.
+- Add your API key to the README.
+- Paste your API key into GitHub Issues, screenshots, or public discussions.
+- Share your API key with other people.
+
+If your API key is accidentally exposed, **revoke/rotate it immediately** and create a replacement key.
+
+### 🧪 Important for Contributors
+
+Each installation of Q-Care should use its **own Gemini API key**.
+
+The repository intentionally does not contain a working API key. This prevents credentials from being exposed through version control.
+
+Q-Care's AI components obtain the key from:
+
+```python
+os.environ.get("GEMINI_API_KEY")
+```
+
+Your API key should remain private to your own local environment.
+
+
 ## 🧪 Testing
 
 From the project root, activate the backend environment and run the available tests:
