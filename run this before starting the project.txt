@@ -1,4 +1,4 @@
-In your Q-CARE folder cmd, Run this before starting the project to install the needed dependencies! 
+In your Q-CARE folder cmd, Run these commands before starting the project to install the needed dependencies! 
 
 cd backend
 python -m venv qcare-env
